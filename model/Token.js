@@ -15,7 +15,9 @@ userAgent:{
     required:true
 },
 isValid:{
-    type:Boolean, required: true
+    type:Boolean, required: true,
+    default:true
+
     },
 user:{
     type:mongoose.Types.ObjectId,

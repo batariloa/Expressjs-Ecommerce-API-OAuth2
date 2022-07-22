@@ -38,6 +38,12 @@ const UserSchema = mongoose.Schema({
     verificationToken:{
         type:String,
         required:true
+    },
+    passwordToken:{
+        type:String
+    },
+    passwordTokenExpirationDate:{
+        type:Date
     }
 })
 

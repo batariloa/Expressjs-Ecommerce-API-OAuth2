@@ -28,6 +28,10 @@ const getSingleUser = async (req, res) => {
 
 const showCurrentUser = async(req,res)=>{
 
+console.log('SHOW CURRENT USER ', req.user)
+if(!req.user.role){
+    throw new CustomError.BadRequestError('Not authenticated') 
+}
     console.log('users roles in controller' , req.user.role)
     res.json({user:req.user})
 }
